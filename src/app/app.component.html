@@ -1,0 +1,15 @@
+<app-nav></app-nav>
+<div class="main-wrapper">
+  <!-- <-product-appgrid></app-product-grid> -->
+    <app-product-grid></app-product-grid>
+    <button (click)=addFood()>add food</button>
+    <button (click)=getFood()>get food</button>
+    <ul>
+      <li>Hello {{foods$}}</li>
+      <li *ngFor="let food of foods$| async">
+        {{food.id}}
+        {{food.name}}
+      </li>
+    </ul>
+</div>
+<app-footer></app-footer>
